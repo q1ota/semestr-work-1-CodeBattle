@@ -1,0 +1,162 @@
+.block-cube {
+    position: relative;
+}
+.block-cube .bg-top {
+    position: absolute;
+    height: 10px;
+    background: #fff;
+    bottom: 100%;
+    left: 5px;
+    right: -5px;
+    transform: skew(-45deg, 0);
+    margin: 0;
+}
+.block-cube .bg-top .bg-inner {
+    bottom: 0;
+}
+.block-cube .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.block-cube .bg-right {
+    position: absolute;
+    background: #fff;
+    top: -5px;
+    z-index: 0;
+    bottom: 5px;
+    width: 10px;
+    left: 100%;
+    transform: skew(0, -45deg);
+}
+.block-cube .bg-right .bg-inner {
+    left: 0;
+}
+.block-cube .bg .bg-inner {
+    transition: all 0.2s ease-in-out;
+}
+.block-cube .bg-inner {
+    background: #212121;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+}
+.block-cube .text {
+    position: relative;
+    z-index: 2;
+}
+.block-cube.block-input input,
+.block-cube.block-input textarea,
+.block-cube.block-input select {
+    position: relative;
+    z-index: 2;
+}
+.block-cube.block-input input:focus ~ .bg-right .bg-inner,
+.block-cube.block-input input:focus ~ .bg-top .bg-inner,
+.block-cube.block-input input:focus ~ .bg-inner .bg-inner,
+.block-cube.block-input textarea:focus ~ .bg-right .bg-inner,
+.block-cube.block-input textarea:focus ~ .bg-top .bg-inner,
+.block-cube.block-input textarea:focus ~ .bg-inner .bg-inner,
+.block-cube.block-input select:focus ~ .bg-right .bg-inner,
+.block-cube.block-input select:focus ~ .bg-top .bg-inner,
+.block-cube.block-input select:focus ~ .bg-inner .bg-inner {
+    top: 100%;
+    background: rgba(255, 255, 255, 0.5);
+}
+.block-cube.block-input .bg-top,
+.block-cube.block-input .bg-right,
+.block-cube.block-input .bg {
+    background: rgba(255, 255, 255, 0.5);
+    transition: background 0.2s ease-in-out;
+}
+.block-cube.block-input .bg-right .bg-inner,
+.block-cube.block-input .bg-top .bg-inner {
+    transition: all 0.2s ease-in-out;
+}
+.block-cube.block-input:focus .bg-top,
+.block-cube.block-input:focus .bg-right,
+.block-cube.block-input:focus .bg,
+.block-cube.block-input:hover .bg-top,
+.block-cube.block-input:hover .bg-right,
+.block-cube.block-input:hover .bg {
+    background: rgba(255, 255, 255, 0.8);
+}
+.block-cube.block-cube-hover:focus .bg .bg-inner,
+.block-cube.block-cube-hover:hover .bg .bg-inner {
+    top: 100%;
+}
+.btn.block-cube .bg-top,
+.btn.block-cube .bg-right,
+.btn.block-cube .bg {
+    background: rgba(255, 255, 255, 0.5);
+    transition: background 0.2s ease-in-out;
+}
+.btn.block-cube .bg .bg-inner,
+.btn.block-cube .bg-top .bg-inner,
+.btn.block-cube .bg-right .bg-inner {
+    top: 2px !important;
+    background: #212121 !important;
+    transition: none !important;
+}
+.btn.block-cube:hover .bg-top,
+.btn.block-cube:hover .bg-right,
+.btn.block-cube:hover .bg,
+.btn.block-cube:focus .bg-top,
+.btn.block-cube:focus .bg-right,
+.btn.block-cube:focus .bg,
+.btn.block-cube:active .bg-top,
+.btn.block-cube:active .bg-right,
+.btn.block-cube:active .bg {
+    background: rgba(100, 100, 255, 0.8);
+}
+.btn.block-cube:hover .bg .bg-inner,
+.btn.block-cube:focus .bg .bg-inner,
+.btn.block-cube:active .bg .bg-inner {
+    top: 2px !important;
+    background: #212121 !important;
+    transition: none !important;
+}
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.btn:disabled:hover .bg-top,
+.btn:disabled:hover .bg-right,
+.btn:disabled:hover .bg {
+    background: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Стили для выпадающего списка - более специфичные */
+ .block-cube.block-input select {
+     background-color: transparent !important;
+     color: white !important;
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e") !important;
+     background-position: right 0.5rem center !important;
+     background-repeat: no-repeat !important;
+     background-size: 1.5em 1.5em !important;
+ }
+
+.block-cube.block-input select option {
+    background-color: #212121 !important;
+    color: white !important;
+}
+
+.block-cube.block-input select option:hover,
+.block-cube.block-input select option:focus {
+    background-color: #6464ff !important;
+}
+
+/* Скрытие стрелок у числового поля */
+.hide-arrows::-webkit-outer-spin-button,
+.hide-arrows::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.hide-arrows {
+    -moz-appearance: textfield;
+}

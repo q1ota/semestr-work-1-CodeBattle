@@ -1,0 +1,83 @@
+/* Стили для кастомного чекбокса */
+.checkbox-square.checked {
+    background: rgba(100, 100, 255, 0.8) !important;
+}
+
+.checkbox-square.checked .bg-inner {
+    background: #6464ff !important;
+}
+
+.checkbox-square {
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.checkmark {
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
+}
+
+/* Скрытие стрелок у числового поля */
+.hide-arrows::-webkit-outer-spin-button,
+.hide-arrows::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.hide-arrows {
+    -moz-appearance: textfield;
+}
+
+/* Стили для select */
+select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+/* Плавные переходы для интерактивных элементов */
+.custom-checkbox {
+    transition: opacity 0.2s ease;
+}
+
+.custom-checkbox:hover {
+    opacity: 0.8;
+}
+
+/* Полный кубик для чекбокса */
+.checkbox-container {
+    transform: translateZ(0);
+}
+
+.checkbox-square .bg-top,
+.checkbox-square .bg-right,
+.checkbox-square .bg {
+    background: rgba(255, 255, 255, 0.5);
+    transition: background 0.2s ease-in-out;
+}
+
+.checkbox-square.checked .bg-top,
+.checkbox-square.checked .bg-right,
+.checkbox-square.checked .bg {
+    background: rgba(100, 100, 255, 0.8) !important;
+}
+
+.checkbox-square .bg .bg-inner,
+.checkbox-square .bg-top .bg-inner,
+.checkbox-square .bg-right .bg-inner {
+    top: 2px !important;
+    background: #212121 !important;
+    transition: none !important;
+}
+
+.checkbox-square.checked .bg .bg-inner,
+.checkbox-square.checked .bg-top .bg-inner,
+.checkbox-square.checked .bg-right .bg-inner {
+    top: 2px !important;
+    background: #6464ff !important;
+    transition: none !important;
+}
